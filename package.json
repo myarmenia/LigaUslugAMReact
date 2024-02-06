@@ -1,0 +1,82 @@
+{
+  "name": "liga_services",
+  "homepage": "https://ligauslug.ru",
+  "proxy": "https://backend.ligauslug.ru",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@date-io/date-fns": "^2.11.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.2.4",
+    "@mui/lab": "^5.0.0-alpha.92",
+    "@mui/material": "^5.10.0",
+    "@mui/styles": "^5.2.3",
+    "@mui/x-date-pickers": "^6.12.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.24.0",
+    "body-parser": "^1.20.1",
+    "browserify-zlib": "^0.2.0",
+    "classnames": "^2.3.1",
+    "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.0",
+    "date-fns": "^2.27.0",
+    "dayjs": "^1.11.6",
+    "express": "^4.18.2",
+    "formik": "^2.4.5",
+    "i": "^0.3.7",
+    "laravel-echo": "^1.14.1",
+    "lodash.debounce": "^4.0.8",
+    "material-ui-image": "^3.3.2",
+    "material-ui-popup-state": "^2.0.0",
+    "moment": "^2.29.1",
+    "npm": "^9.2.0",
+    "pusher": "^5.1.1-beta",
+    "pusher-js": "^7.4.0",
+    "qs": "^6.11.2",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.27.1",
+    "react-phone-input-2": "^2.15.1",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.1.1",
+    "react-scripts": "5.0.0",
+    "react-yandex-maps": "^4.6.0",
+    "swiper": "^8.4.7",
+    "universal-cookie": "^4.0.4",
+    "web-vitals": "^2.1.2",
+    "yup": "^0.32.11",
+    "zlib": "^1.0.5"
+    
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

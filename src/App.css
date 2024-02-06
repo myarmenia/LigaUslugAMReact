@@ -1,0 +1,86 @@
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: inset 0 0 0 50px #fff;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.87);
+  /* transition: background-color 600000s 0s, color 600000s 0s; */
+}
+* {
+  overflow-wrap: anywhere;
+}
+.dropdown_phone_input {
+  width: 1034% !important;
+}
+@media only screen and (max-width: 640px) {
+  .dropdown_phone_input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .dropdown_phone_input {
+    width: 247px !important;
+  }
+}
+.react-tel-input .form-control {
+  width: 100% !important;
+}
+.modal_phone_input_in_suport {
+  width: 1155% !important;
+}
+/* ::placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #000;
+}
+
+::-ms-input-placeholder {
+	color: #000;
+} */
+@media only screen and (max-width: 900px) {
+  .modal_phone_input_in_suport {
+    width: 887% !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .modal_phone_input_in_suport {
+    width: 473% !important;
+  }
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #000;
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(75 154 45 / 30%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(75 154 45);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(75 154 45 / 30%);
+  width: 10px;
+}
+::-webkit-scrollbar-button:hover,
+::-webkit-scrollbar-button:active {
+  background: rgb(75 154 45 / 30%);
+  width: 10px;
+}
+*:disabled {
+  color: #000 !important;
+}
+.disable:disabled {
+  color: #000;
+}
+.swiper-slide {
+  flex-shrink: unset !important;
+}
