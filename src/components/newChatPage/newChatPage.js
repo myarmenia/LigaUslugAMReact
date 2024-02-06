@@ -420,6 +420,7 @@ const ChatUsersInformation = React.forwardRef(
                   });
                })();
             }}>
+              
             <Avatar
                sx={{ width: '40px', height: '40px' }}
                src={`${process.env.REACT_APP_IMG_API}${
