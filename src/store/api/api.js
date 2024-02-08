@@ -12,7 +12,7 @@ export const instance = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
   headers: {
     'Content-Type':
-      'multipart/form-data; application/x-www-form-urlencoded; charset=UTF-8;application/json',
+      'application/x-www-form-urlencoded; charset=UTF-8;application/json',
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
     Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ export const options = {
   wssPort: 6001,
   forceTLS: false,
   disableStats: true,
-  enabledTransports: ['ws', 'wss'],
+  // enabledTransports: ['wss', 'wss'],
 };
 
 //  const echo = new Echo(options);
