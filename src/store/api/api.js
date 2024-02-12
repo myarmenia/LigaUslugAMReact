@@ -43,3 +43,11 @@ export const options = {
 
 //  const echo = new Echo(options);
 // export const echo = new Echo(options);
+
+  disableStats: true,
+  // enabledTransports: ['wss', 'wss'],
+
+
+
+//  const echo = new Echo(options);
+// export const echo = new Echo(options);
