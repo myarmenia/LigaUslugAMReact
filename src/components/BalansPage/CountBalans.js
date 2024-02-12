@@ -49,6 +49,7 @@ const CountBalans = () =>{
             <Container maxWidth={'lg'}>
                 <Box className={classes.containerSupport}>
                     <Card>
+                        
                         <Typography style={{textAlign: 'center'}} variant={'h4'}>Աջակցություն</Typography>
                         <Divider color={'#808080'} style={{margin: '20px 0 40px 0'}} />
                         <Box className={classes.subContainerSupport}>
