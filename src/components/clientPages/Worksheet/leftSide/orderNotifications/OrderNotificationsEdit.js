@@ -38,7 +38,7 @@ const OrderNotificationsEdit = ({ setOpenToaster, setNotificationOrders }) => {
   const dispatch = useDispatch();
 
   const changeNotification = async () => {
-    window.ym(91484981, "reachGoal", "zayavka");
+    // window.ym(91484981, "reachGoal", "zayavka");
     await dispatch(
       updateNotifications({
         geting_notification:

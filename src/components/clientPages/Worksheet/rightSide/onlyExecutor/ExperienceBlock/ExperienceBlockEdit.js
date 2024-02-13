@@ -110,7 +110,7 @@ const ExperienceBlockEdit = ({ setEditExperienceBlock, setOpenToaster }) => {
           ),
         })}
         onSubmit={async (values, action) => {
-          window.ym(91484981, 'reachGoal', 'դիմում');
+          // window.ym(91484981, 'reachGoal', 'դիմում');
           setIsSubmitting(true);
           const data = {
             ...values,

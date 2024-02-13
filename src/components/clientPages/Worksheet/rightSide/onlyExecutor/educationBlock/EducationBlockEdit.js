@@ -80,7 +80,7 @@ const EducationBlockEdit = ({ setEditEducationBlock, setOpenToaster }) => {
             initialValues={initialValues}
             onSubmit={async (values, action) => {
                if (!err) {
-                  window.ym(91484981, 'reachGoal', 'zayavka');
+                  // window.ym(91484981, 'reachGoal', 'zayavka');
                   dispatch(updateExecutorData(values));
                   setIsSubmitting(true);
                }

@@ -124,7 +124,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
       validationSchema={AddNewOrderValidation(value)}
       onSubmit={async (values, action) => {
         if (!err && !syzeErr) {
-          window.ym(91484981, 'reachGoal', 'zayavka');
+          // window.ym(91484981, 'reachGoal', 'zayavka');
           const formData = new FormData();
           for (let key in values) {
             if (key === 'upload_img') {

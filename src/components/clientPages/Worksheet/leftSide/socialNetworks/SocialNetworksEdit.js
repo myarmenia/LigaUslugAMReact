@@ -36,7 +36,7 @@ const SocialNetworksEdit = ({ setEditSocialNetwork, setOpenToaster }) => {
   );
   const [linkError, setLinkError] = useState(false);
   const changeMyProfiles = async () => {
-    window.ym(91484981, 'reachGoal', 'zayavka');
+    // window.ym(91484981, 'reachGoal', 'zayavka');
     setLinkError('');
     if (!fasebook_link && !instagram_link) {
       return setLinkError('emptys');
