@@ -110,7 +110,7 @@ const LoginPage = () => {
 					initialValues={{email: "", password: ""}}
 					validationSchema={LoginValidation}
 					onSubmit={async values => {
-						window.ym(91484981, "reachGoal", "zayavka")
+						// window.ym(91484981, "reachGoal", "zayavka")
 						await dispatch(Login(values))
 						await dispatch(changeStatus(userStatus))
 					}}

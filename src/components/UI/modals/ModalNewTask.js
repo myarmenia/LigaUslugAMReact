@@ -375,7 +375,7 @@ const ModalNewTask = ({
                      onSubmit={async (values, action) => {
                         dispatch(setLoading(true));
                         if (!err && !syzeErr) {
-                           window.ym(91484981, 'reachGoal', 'դիմում');
+                           // window.ym(91484981, 'reachGoal', 'դիմում');
                            const formData = new FormData();
                            for (let key in values) {
                               if (key === 'upload_img') {

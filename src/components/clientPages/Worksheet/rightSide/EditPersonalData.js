@@ -64,7 +64,7 @@ const EditPersonalData = ({ setEditPersonallyData, setOpenToaster }) => {
   };
   const sendData = status === 'executor' ? executorData : clientData;
   const sendPersonalData = async () => {
-    window.ym(91484981, 'reachGoal', 'zayavka');
+    // window.ym(91484981, 'reachGoal', 'zayavka');
     setIsSubmitting(true);
     await dispatch(updatePersonalData(sendData));
     setEditPersonallyData(false);
