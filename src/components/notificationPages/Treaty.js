@@ -69,6 +69,8 @@ const Treaty = ({ id, setReadTreaty, readAt }) => {
           label={'ПРОЧИТАЛ(А)'}
         />
       </Box>
+
+      
     </Box>
   );
 };

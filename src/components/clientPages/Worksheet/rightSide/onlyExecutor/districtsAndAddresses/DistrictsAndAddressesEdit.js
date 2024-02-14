@@ -151,7 +151,7 @@ const DistrictsAndAddressesEdit = ({ editAddress, setEditAddress, setOpenToaster
         //   (working_regions) => pick(working_regions, ["executorwork_region"])
         // ),
         onSubmit={async (values, action) => {
-          window.ym(91484981, 'reachGoal', 'zayavka');
+          // window.ym(91484981, 'reachGoal', 'zayavka');
           if (status === 'executor') {
             values = {
               ...values,

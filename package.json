@@ -1,7 +1,7 @@
 {
-  "name": "liga_services",
-  "homepage": "https://ligauslug.ru",
-  "proxy": "https://backend.ligauslug.ru",
+  "name": "gorc-ka",
+  "homepage": "https://gorc-ka.am",
+  "proxy": "https://backend.gorcka.am",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

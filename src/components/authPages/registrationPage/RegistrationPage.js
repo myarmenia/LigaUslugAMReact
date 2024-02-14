@@ -90,7 +90,7 @@ const RegistrationPage = () => {
                }}
                validationSchema={AuthValidation}
                onSubmit={(values) => {
-                  window.ym(91484981, 'reachGoal', 'zayavka');
+                  // window.ym(91484981, 'reachGoal', 'zayavka');
                   dispatch(Registration(values));
                }}>
                {({ values, errors, touched, handleChange, handleSubmit, setFieldValue }) => (

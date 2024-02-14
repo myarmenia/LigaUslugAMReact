@@ -73,7 +73,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
   }, [dispatch]);
   useEffect(() => {
     if (+prise_fromValue > +prise_toValue) {
-      setErr('Сумма не должна превышать максимальную');
+      setErr('Գումարը չպետք է գերազանցի առավելագույնը');
     } else {
       setErr('');
     }
@@ -124,7 +124,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
       validationSchema={AddNewOrderValidation(value)}
       onSubmit={async (values, action) => {
         if (!err && !syzeErr) {
-          window.ym(91484981, 'reachGoal', 'zayavka');
+          // window.ym(91484981, 'reachGoal', 'zayavka');
           const formData = new FormData();
           for (let key in values) {
             if (key === 'upload_img') {
@@ -152,8 +152,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
               <Box>
                 <CustomInput
                   name={'title'}
-                  placeholder={'Название'}
-                  label={'Название'}
+                  placeholder={'Անվանում'}
+                  label={'Անվանում'}
                   handleChange={(val) => {
                     setFieldValue('title', val);
                   }}
@@ -165,8 +165,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
               <Box style={{ marginBottom: '40px' }}>
                 <CustomSelect
                   name={'category_name'}
-                  placeholder={'Категория услуг'}
-                  label={'Категория услуг*'}
+                  placeholder={'Ծառայությունների կատեգորիա'}
+                  label={'Ծառայությունների կատեգորիա*'}
                   handleChange={(val) => {
                     setFieldValue('category_name', val[0]);
                     setFieldValue('subcategory_name', '');
@@ -181,8 +181,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
               </Box>
               <Box style={{ marginBottom: '40px' }}>
                 <CustomSelect
-                  label={'Подкатегория*'}
-                  placeholder={'Подкатегория'}
+                  label={'Ենթակատեգորիա*'}
+                  placeholder={'Ենթակատեգորիա'}
                   name={'subcategory_name'}
                   handleChange={(val) => {
                     setFieldValue('subcategory_name', val[0]);
@@ -195,8 +195,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                 />
               </Box>
               <CustomInput
-                label={'Описание'}
-                placeholder={'Описание'}
+                label={'Նկարագրություն'}
+                placeholder={'Նկարագրություն'}
                 name={'task_description'}
                 value={values.task_description}
                 handleChange={(val) => setFieldValue('task_description', val)}
@@ -272,7 +272,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                       paddingLeft: '20px',
                       color: '#000',
                     }}>
-                    Прикрепить файл
+                   Կցել ֆայլը
                   </p>
                 </label>
                 <Box>
@@ -282,7 +282,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                       mt: '5px',
                       color: syzeErr ? 'red' : '#000',
                     }}>
-                    Максимальное количество для загрузки 2 мб <br />
+                   Վերբեռնման առավելագույն քանակը 2 ՄԲ է <br />
                     {syzeErr && `Вы превысили максимальное количество`}
                   </Typography>
                 </Box>
@@ -336,8 +336,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                     <>
                       <Box sx={{ marginBottom: '40px' }}>
                         <CustomSelect
-                          label={'Страна'}
-                          placeholder={'Страна'}
+                          label={'երկիր'}
+                          placeholder={'երկիր'}
                           name={'nation'}
                           value={values.nation}
                           handleChange={(val) => setFieldValue('nation', val[0])}
@@ -346,8 +346,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                       </Box>
                       <Box style={{ marginBottom: '40px' }}>
                         <CustomSelect
-                          label={'Регион'}
-                          placeholder={'Регион'}
+                          label={'Տարածաշրջան'}
+                          placeholder={'Տարածաշրջան'}
                           name={'region'}
                           value={values.region}
                           //   handleChange={(val) => setFieldValue("region", val)}
@@ -367,8 +367,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                       </Box>
                       <Box style={{ marginBottom: '40px' }}>
                         <CustomSelect
-                          label={'Населенный пункт / Город'}
-                          placeholder={'Населенный пункт / Город'}
+                          label={'Տեղանք/Քաղաք'}
+                          placeholder={'Տեղանք/Քաղաք'}
                           name={'country_name'}
                           disabled={newArrayCities.length === 0}
                           value={values.country_name}
@@ -380,9 +380,9 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                       </Box>
 
                       <CustomInput
-                        label={'Адрес'}
+                        label={'Հասցե'}
                         name={'address'}
-                        placeholder={'адрес/улица/квартира или дом'}
+                        placeholder={'Հասցե'}
                         value={values.address}
                         handleChange={(val) => setFieldValue('address', val)}
                         touched={touched.address}
@@ -400,7 +400,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                     style={{ margin: '-15px 0 10px 0', wordBreak: 'break-word' }}
                     className={classes.inputText}
                     component="legend">
-                    Место выполнения работы
+                    Աշխատանքի կատարման վայրը
                   </FormLabel>
                   <RadioGroup aria-label="gender" defaultValue="Дистанционно" name="task_location">
                     <FormControlLabel
@@ -419,7 +419,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                           value="Дистанционно"
                         />
                       }
-                      label="Дистанционно"
+                      label="Հեռակա կարգով"
                     />
                     <FormControlLabel
                       control={
@@ -437,7 +437,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                           value="У исполнителя"
                         />
                       }
-                      label="У исполнителя"
+                      label="Կատարողի մոտ"
                     />
                     <FormControlLabel
                       control={
@@ -455,7 +455,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                           value="У клиента"
                         />
                       }
-                      label="У клиента"
+                      label="Հաճախորդի մոտ"
                     />
                   </RadioGroup>
                 </FormControl>
@@ -476,8 +476,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                       <>
                         <Box sx={{ marginBottom: '40px' }}>
                           <CustomSelect
-                            placeholder={'Страна'}
-                            label={'Страна'}
+                            placeholder={'երկիր'}
+                            label={'երկիր'}
                             name={'nation'}
                             value={values.nation}
                             handleChange={(val) => setFieldValue('nation', val[0])}
@@ -486,8 +486,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                         </Box>
                         <Box style={{ marginBottom: '40px' }}>
                           <CustomSelect
-                            label={'Регион'}
-                            placeholder={'Регион'}
+                            label={'Տարածաշրջան'}
+                            placeholder={'Տարածաշրջան'}
                             name={'region'}
                             value={values.region}
                             //   handleChange={(val) => setFieldValue("region", val)}
@@ -507,8 +507,8 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                         </Box>
                         <Box style={{ marginBottom: '40px' }}>
                           <CustomSelect
-                            label={'Населенный пункт / Город'}
-                            placeholder={'Населенный пункт / Город'}
+                            label={'Տեղանք/Քաղաք'}
+                            placeholder={'Տեղանք/Քաղաք'}
                             name={'country_name'}
                             disabled={newArrayCities.length === 0}
                             value={values.country_name}
@@ -520,9 +520,9 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                         </Box>
 
                         <CustomInput
-                          label={'Адрес'}
+                          label={'Հասցե'}
                           name={'address'}
-                          placeholder={'адрес/улица/квартира или дом'}
+                          placeholder={'Հասցե'}
                           value={values.address}
                           handleChange={(val) => setFieldValue('address', val)}
                           touched={touched.address}
@@ -534,7 +534,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                 )}
               </Box>
               <p style={{ marginBottom: '15px' }} className={classes.inputText}>
-                Желаемый срок начала работ
+                 Մեկնարկի ցանկալի ամսաթիվը
               </p>
               <Box style={{ marginBottom: '20px', width: '60%' }}>
                 <Box style={{ marginBottom: '20px' }}>
@@ -557,20 +557,20 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                 />
               </Box>
               <p style={{ marginBottom: '15px' }} className={classes.inputText}>
-                Оплата
+               Վճարում
               </p>
               <Box sx={{ mb: '5px' }}>
                 <CustomInputIcon
                   ref={prise_from}
                   onInpitChange={setPrise_fromValue}
                   name={'price_from'}
-                  label={'Оплата'}
+                  label={'Վճարում'}
                   value={values.price_from}
                   handleChange={handleChange}
                   touched={touched.price_from}
                   error={errors.price_from || (touched.price_from && err)}
-                  icon={'Руб.'}
-                  placeholder={'От'}
+                  icon={'Դրամ.'}
+                  placeholder={'Սկսած'}
                   width={'60%'}
                 />
               </Box>
@@ -578,13 +578,13 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
                 ref={prise_to}
                 onInpitChange={setPrise_toValue}
                 name={'price_to'}
-                label={'Оплата'}
+                label={'Վճարում'}
                 value={values.price_to}
                 handleChange={handleChange}
                 touched={touched.price_to}
                 error={errors.price_to || (touched.price_to && err)}
-                icon={'Руб.'}
-                placeholder={'До'}
+                icon={'Դրամ.'}
+                placeholder={'Մինչեւ'}
                 width={'60%'}
               />
             </Grid>
@@ -597,7 +597,7 @@ const AddNewOrderForm = ({ setOpenToaster, setShowForm }) => {
               backgroundColor={'#FF6B00'}
               action={handleSubmit}
               sx={{ height: '100%' }}
-              label={'Оформить заказ'}
+              label={'Հաստատել պատվերը'}
             />
           </Box>
         </form>

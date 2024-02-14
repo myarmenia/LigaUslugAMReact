@@ -245,7 +245,7 @@ const ModalPersonalData = ({ showModal, setShowModal }) => {
                                           style={{ textTransform: 'none' }}
                                           {...INPUT_PROPS}
                                           onClick={handleSubmit(async (data) => {
-                                             window.ym(91484981, 'reachGoal', 'zayavka');
+                                             // window.ym(91484981, 'reachGoal', 'zayavka');
                                              const response = await instance.post(
                                                 'v1/user/get-phone-number',
                                                 {
@@ -293,7 +293,7 @@ const ModalPersonalData = ({ showModal, setShowModal }) => {
                                              style={{ textTransform: 'none' }}
                                              disabled={!isSent}
                                              onClick={() => {
-                                                window.ym(91484981, 'reachGoal', 'zayavka');
+                                                // window.ym(91484981, 'reachGoal', 'zayavka');
                                                 dispatch(setProfileIsWrongCode());
                                                 dispatch(
                                                    verifyPhoneCode(watch('verification_code')),

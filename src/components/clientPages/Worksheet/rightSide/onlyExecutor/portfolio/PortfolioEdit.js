@@ -75,7 +75,7 @@ const PortfolioEdit = ({ setEditPortfolio, setOpenToaster }) => {
             ),
           })}
           onSubmit={async (values, action) => {
-            window.ym(91484981, 'reachGoal', 'դիմում');
+            // window.ym(91484981, 'reachGoal', 'դիմում');
             let formData = new FormData();
             Object.entries(values).forEach((item) => {
               const key = get(item, '[0]', '');

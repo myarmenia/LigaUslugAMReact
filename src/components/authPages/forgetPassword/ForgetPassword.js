@@ -49,7 +49,7 @@ const ForgetPasswordPage = () => {
                initialValues={{ password: '', password_confirm: '' }}
                validationSchema={UpdatePassword}
                onSubmit={(values) => {
-                  window.ym(91484981, 'reachGoal', 'zayavka');
+                  // window.ym(91484981, 'reachGoal', 'zayavka');
                   dispatch(ResetPassword({ ...values, token, email }));
                   navigate('/login');
                }}>
