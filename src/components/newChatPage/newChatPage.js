@@ -244,7 +244,7 @@ export default function NewChatPage() {
             </Box>
             <ChatSection open={open} />
          </Box>
-         {tasksList ? (
+         {tasksList && tasksList.length > 0 ? (
             <Box
                sx={
                   auth
@@ -420,7 +420,6 @@ const ChatUsersInformation = React.forwardRef(
                   });
                })();
             }}>
-              
             <Avatar
                sx={{ width: '40px', height: '40px' }}
                src={`${process.env.REACT_APP_IMG_API}${

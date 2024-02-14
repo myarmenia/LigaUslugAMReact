@@ -274,7 +274,7 @@ const ModalNewTask = ({
    const [open, setOpen] = React.useState(false);
    const handleClose = () => setShowModal(false);
    const classes = useStyles();
-   const [value, setValue] = React.useState('Հեռակա կարգով');
+   const [value, setValue] = React.useState('Дистанционно');
    const dispatch = useDispatch();
    const matches900 = useMediaQuery('(min-width:900px)');
    const [err, setErr] = useState('');
@@ -643,7 +643,7 @@ const ModalNewTask = ({
                                        </p>
                                     )}
                                  </Box>
-                                 {loading && value === 'Հաճախորդի մոտ' && matches900 ? (
+                                 {loading && value === 'У клиента' && matches900 ? (
                                     <>
                                        <Box
                                           sx={{
@@ -659,7 +659,7 @@ const ModalNewTask = ({
                                     </>
                                  ) : (
                                     <>
-                                       {value === 'Հաճախորդի մոտ' && matches900 && (
+                                       {value === 'У клиента' && matches900 && (
                                           <Box
                                              sx={{
                                                 width: !matches900 ? '100%' : '100%',
@@ -702,7 +702,7 @@ const ModalNewTask = ({
                                              />
                                           </Box>
                                        )}
-                                       {value === 'Հաճախորդի մոտ' && matches900 && (
+                                       {value === 'У клиента' && matches900 && (
                                           <Box
                                              sx={{
                                                 width: !matches900 ? '100%' : '100%',
@@ -753,7 +753,7 @@ const ModalNewTask = ({
                                        </FormLabel>
                                        <RadioGroup
                                           aria-label="gender"
-                                          defaultValue="Հեռակա կարգով"
+                                          defaultValue="Дистанционно"
                                           name="task_location">
                                           <FormControlLabel
                                              control={
@@ -765,13 +765,13 @@ const ModalNewTask = ({
                                                    style={{ color: '#4B9A2D' }}
                                                    size={'small'}
                                                    onChange={(e) => {
-                                                      setValue('Հեռակա կարգով');
+                                                      setValue('Дистанционно');
                                                       setFieldValue(
                                                          'task_location',
                                                          e.target.value,
                                                       );
                                                    }}
-                                                   value="Հեռակա կարգով"
+                                                   value="Дистанционно"
                                                 />
                                              }
                                              label="Հեռակա կարգով"
@@ -780,7 +780,7 @@ const ModalNewTask = ({
                                              control={
                                                 <Radio
                                                    onChange={(e) => {
-                                                      setValue('Կատարողի մոտ');
+                                                      setValue('У исполнителя');
                                                       setFieldValue(
                                                          'task_location',
                                                          e.target.value,
@@ -792,7 +792,7 @@ const ModalNewTask = ({
                                                    }}
                                                    style={{ color: '#4B9A2D' }}
                                                    size={'small'}
-                                                   value="Կատարողի մոտ"
+                                                   value="У исполнителя"
                                                 />
                                              }
                                              label="Կատարողի մոտ"
@@ -807,20 +807,20 @@ const ModalNewTask = ({
                                                    style={{ color: '#4B9A2D' }}
                                                    size={'small'}
                                                    onChange={(e) => {
-                                                      setValue('Հաճախորդի մոտ');
+                                                      setValue('У клиента');
                                                       setFieldValue(
                                                          'task_location',
                                                          e.target.value,
                                                       );
                                                    }}
-                                                   value="Հաճախորդի մոտ"
+                                                   value="У клиента"
                                                 />
                                              }
                                              label="Հաճախորդի մոտ"
                                           />
                                        </RadioGroup>
                                     </FormControl>
-                                    {loading && value === 'Հաճախորդի մոտ' && !matches900 ? (
+                                    {loading && value === 'У клиента' && !matches900 ? (
                                        <>
                                           <Box
                                              sx={{
@@ -836,7 +836,7 @@ const ModalNewTask = ({
                                        </>
                                     ) : (
                                        <>
-                                          {value === 'Հաճախորդի մոտ' && !matches900 && (
+                                          {value === 'У клиента' && !matches900 && (
                                              <Box
                                                 // style={{ width: "56%","@media (max-width: 450px)": {
                                                 //   width:"243px"
@@ -883,7 +883,7 @@ const ModalNewTask = ({
                                                 />
                                              </Box>
                                           )}
-                                          {value === 'Հաճախորդի մոտ' && !matches900 && (
+                                          {value === 'У клиента' && !matches900 && (
                                              <Box
                                                 sx={{
                                                    width: !matches900 ? '100%' : '100%',
@@ -921,7 +921,7 @@ const ModalNewTask = ({
                                     )}
                                  </Box>
                                  <p style={{ marginBottom: '15px' }} className={classes.inputText}>
-                                   Մեկնարկի ցանկալի ամսաթիվը
+                                    Մեկնարկի ցանկալի ամսաթիվը
                                  </p>
                                  <Box style={{ marginBottom: '20px' }}>
                                     <Box style={{ marginBottom: '20px' }}>
@@ -988,7 +988,7 @@ const ModalNewTask = ({
                               }}></Box>
                            <Box
                               style={{
-                                 marginTop: value === 'Հաճախորդի մոտ' ? '10px' : '10px',
+                                 marginTop: value === 'У клиента' ? '10px' : '10px',
                                  paddingBottom: '20px',
                               }}>
                               <BlueButton

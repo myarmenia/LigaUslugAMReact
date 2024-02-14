@@ -293,7 +293,7 @@ const ModalPersonalData = ({ showModal, setShowModal }) => {
                                              style={{ textTransform: 'none' }}
                                              disabled={!isSent}
                                              onClick={() => {
-                                                window.ym(91484981, 'reachGoal', 'zayavka');
+                                                // window.ym(91484981, 'reachGoal', 'zayavka');
                                                 dispatch(setProfileIsWrongCode());
                                                 dispatch(
                                                    verifyPhoneCode(watch('verification_code')),
