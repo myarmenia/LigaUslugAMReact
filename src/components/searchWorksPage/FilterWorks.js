@@ -461,7 +461,7 @@ const FilterWorks = ({ selctSubCategotis = [], data, region }) => {
                                        root: classes.radio,
                                        checked: classes.checked,
                                     }}
-                                    style={{ color: '#FF6B00' }}
+                                    style={{ color: '#EA004F' }}
                                     size={'small'}
                                     onChange={(e) => {
                                        setPerformLocation(e.target.value);
@@ -485,7 +485,7 @@ const FilterWorks = ({ selctSubCategotis = [], data, region }) => {
                                        root: classes.radio,
                                        checked: classes.checked,
                                     }}
-                                    style={{ color: '#FF6B00' }}
+                                    style={{ color: '#EA004F' }}
                                     size={'small'}
                                     value="Կատարողի մոտ"
                                  />
@@ -499,7 +499,7 @@ const FilterWorks = ({ selctSubCategotis = [], data, region }) => {
                                        root: classes.radio,
                                        checked: classes.checked,
                                     }}
-                                    style={{ color: '#FF6B00' }}
+                                    style={{ color: '#EA004F' }}
                                     size={'small'}
                                     onChange={(e) => {
                                        setPerformLocation(e.target.value);
@@ -757,7 +757,7 @@ const FilterWorks = ({ selctSubCategotis = [], data, region }) => {
                      {/* ........................... Ծարայության արժեք (֏) end ....................................................... */}
                      <Button
                         sx={{
-                           background: '#FF6B00',
+                           background: '#EA004F',
                            width: '100%',
                            borderRadius: '20px',
                            color: '#FFFFFF',
@@ -765,8 +765,8 @@ const FilterWorks = ({ selctSubCategotis = [], data, region }) => {
                            mt: '25px',
                            '&:hover': {
                               background: '#FFFFFF',
-                              color: '#FF6B00',
-                              border: '1px solid #FF6B00',
+                              color: '#EA004F',
+                              border: '1px solid #EA004F',
                            },
                         }}
                         // disabled={!(submitSubCategotis.length && categoryValue)}

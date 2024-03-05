@@ -51,7 +51,6 @@ const Notifications = ({
    console.log(created_at);
    // const [sx, setSx] = useState(21);
 
-
    if (!matches960) {
       return (
          (EXECUTOR_LINK.includes(type) || EMPLOYER_LINK.includes(type)) && (
@@ -216,7 +215,7 @@ const Notifications = ({
                                  e.stopPropagation();
                                  dispatch(readNotification(id));
                               }}
-                              sx={{ color: '#449D36', fontSize: '20px' }}
+                              sx={{ color: '#8A74EF', fontSize: '20px' }}
                               // label={'Նշել որպես կարդացված'}
                            >
                               Նշել որպես կարդացված
@@ -299,7 +298,7 @@ const Notifications = ({
                         <Typography variant="body1">{NOTIFICATION_STATUSES[type]}</Typography>
                         <Typography
                            style={{
-                              color: '#FF6B00',
+                              color: '#EA004F',
                            }}>
                            {moment(created_at).format('LL')}
                         </Typography>
@@ -354,7 +353,7 @@ const Notifications = ({
                            }}
                            // label={'Նշել որպես կարդացված'}
                            sx={{
-                              color: '#449D36',
+                              color: '#8A74EF',
                               fontSize: '20px',
                               marginLeft: '10px',
                               '@media(max-width: 1200px)': { fontSize: '16px' },

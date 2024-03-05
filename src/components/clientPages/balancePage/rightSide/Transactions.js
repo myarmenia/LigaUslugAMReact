@@ -22,7 +22,7 @@ const Transactions = () => {
   const media437 = useMediaQuery("(min-width:441px)");
   return (
     <Card>
-      <Typography variant={"h1"}>Последние транзакции</Typography>
+      <Typography variant={"h1"}>Վերջին գործարքները</Typography>
       <CustomDivider />
       <Box>
         {transactions &&
@@ -78,7 +78,7 @@ const Transactions = () => {
                           : ""
                       }${account} руб.`}
                     </Typography>
-                    <Typography variant={"h5"}>Банковская карта</Typography>
+                    <Typography variant={"h5"}>Բանկային քարտ</Typography>
                   </Box>
                 </Box>
                 <CustomDivider />
@@ -91,7 +91,7 @@ const Transactions = () => {
             style={{ cursor: "pointer" }}
             onClick={() => setIsShowAll((prev) => !prev)}
           >
-            {isShowAll ? "Скрыть <<" : "Показать все >>"}
+            {isShowAll ? "Թաքցնել <<" : "ցույց տալ ամբողջը >>"}
           </Typography>
         )}
       </Box>

@@ -59,7 +59,6 @@ async function fetchData(action, dispatch, id) {
    await instance
       .post('v1/user/click-on-special-task', { id: id })
       .then((response) => {
-         // console.log('res',response);
          action(response.data['click-on-special-task']);
       })
       .catch((err) => {
@@ -357,7 +356,7 @@ const ClientOrderAboutPage = () => {
                         </Typography>
 
                         <Typography color={'#5A7287'} sx={{ fontSize: '30px', fontWeight: '500' }}>
-                        սկսած {state?.price_from} դրամից
+                           սկսած {state?.price_from} դրամից
                         </Typography>
                      </Box>
                   </Box>
@@ -407,7 +406,7 @@ const ClientOrderAboutPage = () => {
                               {state.region}, {state.country_name}, {state.address}
                            </div>
                         ) : (
-                           <span>{state?.task_location}</span>
+                           <span>{state?.task_location === 'Дистанционно' ? 'Հեռակա կարգով' : 'Կատարողի մոտ'}</span>
                         )}
                      </Typography>
                   </Box>
@@ -436,7 +435,7 @@ const ClientOrderAboutPage = () => {
                               fontWeight: '500',
                               fontSize: '24px',
                            }}>
-                           Описание
+                           Նկարագրություն
                         </Typography>
                         <Typography color={'#808080'} variant={'h6'}>
                            {state?.task_description}
@@ -568,7 +567,7 @@ const ClientOrderAboutPage = () => {
                               />
                               <Box>
                                  <Typography style={{ fontSize: '17px' }} color={'#00000'}>
-                                     կատարող00000
+                                    կատարող00000
                                  </Typography>
                                  <Typography
                                     variant="h5"
@@ -835,7 +834,7 @@ const ClientOrderAboutPage = () => {
                                     fontSize: '24px',
                                     lineHeight: '28px',
                                  }}>
-                                 Իմ  կարծիքը
+                                 Իմ կարծիքը
                               </Typography>
                               <Rating
                                  value={+state?.reitings?.employer_star_count_to_executor}
@@ -911,7 +910,7 @@ const ClientOrderAboutPage = () => {
                      <Typography
                         variant="body2"
                         color={'warning'}
-                        sx={{ cursor: 'pointer', color: '#E54C51' }}
+                        sx={{ cursor: 'pointer', color: '#E54C51', fontSize:'23px' }}
                         onClick={() => setOpenDialog(true)}>
                         Ջնջել
                      </Typography>
@@ -926,7 +925,7 @@ const ClientOrderAboutPage = () => {
                            const start_time = moment(task_starttime).format(`L`);
                            const finish_time = moment(task_finishtime).format(`L`);
                            const imgPath = executor.executor_profiles?.users?.img_path;
-                           console.log('executorCard', executor);
+
                            return (
                               <Box key={id()}>
                                  {isOpenModalMeeting && (
@@ -939,9 +938,7 @@ const ClientOrderAboutPage = () => {
                                  )}
                                  {index !== 0 && <CustomDivider />}
                                  <Box className={classes.orderSubBlockSpaceBetween}>
-                                    <Typography variant={'h6'}>
-                                       Կատարող No. {index + 1}
-                                    </Typography>
+                                    <Typography variant={'h6'}>Կատարող No. {index + 1}</Typography>
                                     <Typography variant={'h6'}>
                                        {moment(executor.created_at).format(`LT L`)}
                                     </Typography>
@@ -1011,14 +1008,14 @@ const ClientOrderAboutPage = () => {
                                     <Box style={{ paddingRight: '50px' }}>
                                        <Typography variant={'h6'}>Առաջարկվող ժամկետը</Typography>
                                        <Typography variant={'h4'}>
-                                          սկսած  {start_time} մինչև {finish_time}
+                                          սկսած {start_time} մինչև {finish_time}
                                        </Typography>
                                     </Box>
                                     <Box>
                                        <Typography variant={'h6'}>Предлагаемая цена</Typography>
                                        <Typography variant={'h4'}>
-                                          սկսած  {executor.service_price_from} 	֏. մինչև{' '}
-                                          {executor.service_price_to} 	֏.
+                                          սկսած {executor.service_price_from} ֏. մինչև{' '}
+                                          {executor.service_price_to} ֏.
                                        </Typography>
                                     </Box>
                                  </Box>

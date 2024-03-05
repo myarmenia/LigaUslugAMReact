@@ -99,14 +99,14 @@ export default function Work({ data }) {
                         }}>
                         {data.title}
                      </Typography>
-                     <Typography sx={{ mb: '5px', color: '#808080' }}>Категория</Typography>
+                     <Typography sx={{ mb: '5px', color: '#808080' }}>Կատեգորիաներ</Typography>
                      <Typography
                         sx={{
                            mb: '5px',
                         }}>
                         {data?.category_name}
                      </Typography>
-                     <Typography sx={{ mb: '5px', color: '#808080' }}>Подкатегория</Typography>
+                     <Typography sx={{ mb: '5px', color: '#808080' }}>Ենթակատեգորիա</Typography>
                      <Typography>{data?.subcategory_name}</Typography>
                      <Typography variant="body1" sx={{ wordBreak: 'break-all' }}>
                         {data.task_description}
@@ -127,7 +127,7 @@ export default function Work({ data }) {
                            mb: '5px',
                            wordBreak: 'break-word',
                         }}>
-                        Место выполнения
+                        Կատարման վայրը
                      </Typography>
                      <Box sx={{ width: '200px' }}>
                         <Typography variant="body1">

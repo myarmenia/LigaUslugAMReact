@@ -155,7 +155,7 @@ export const useStyles = makeStyles({
       letterSpacing: '0.32px',
    },
    registrTitleOrange: {
-      color: '#FF6B00',
+      color: '#EA004F',
       fontFamily: 'Poppins',
       fontSize: '20px',
       fontStyle: 'normal',
@@ -165,7 +165,7 @@ export const useStyles = makeStyles({
       cursor: 'pointer',
    },
    registrTitleGreen: {
-      color: '#449D36',
+      color: '#8A74EF',
       fontFamily: 'Roboto',
       fontSize: '16px',
       fontStyle: 'normal',

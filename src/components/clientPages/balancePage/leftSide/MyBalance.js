@@ -35,19 +35,19 @@ const MyBalance = ({ setShowModal }) => {
   return (
     <Card sx={{ boxShadow: 2 }}>
       <Box className={classes.orderSubBlockSpaceBetween}>
-        <Typography variant={"h1"}>Счет баланса</Typography>
+        <Typography variant={"h1"}>Մնացորդային հաշիվ</Typography>
       </Box>
       <CustomDivider />
       <Typography style={{ margin: "20px" }} variant={"h1"} component="div">
         <WalletSvg />
-        {balance || 0} руб.
+        {balance || 0} ֏.
       </Typography>
       <Button
         onClick={() => setShowModal(true)}
         fullWidth
         variant={"contained"}
       >
-        Пополнить
+        Լիցքավորել
       </Button>
     </Card>
   );

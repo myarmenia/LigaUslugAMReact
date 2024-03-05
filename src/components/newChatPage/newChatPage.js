@@ -52,8 +52,6 @@ export default function NewChatPage() {
    const [socetData, setSocetData] = useState(null);
    const [tasksListChat, setTasksListChat] = useState([]);
 
-   console.log(tasksList, '<<<<<<<<<<<<<<<<<<<<<<<<<<');
-
    useEffect(() => {
       if (!tasksList) {
          dispatch(getConversationTaskList());

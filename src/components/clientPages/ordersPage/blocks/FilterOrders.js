@@ -250,7 +250,7 @@ const FilterOrders = ({
                     {!isValidPrice && <Box sx={{color: 'red'}}>от должен быть меньше чем до</Box>} */}
                <Button
                   sx={{
-                     background: '#FF6B00',
+                     background: '#EA004F',
                      width: '100%',
                      borderRadius: '10px',
                      color: '#FFFFFF',
@@ -258,8 +258,8 @@ const FilterOrders = ({
                      mt: '25px',
                      '&:hover': {
                         background: '#E1E3E3',
-                        border: '1px solid #FF6B00',
-                        color: '#FF6B00',
+                        border: '1px solid #EA004F',
+                        color: '#EA004F',
                      },
                   }}
                   onClick={() => {

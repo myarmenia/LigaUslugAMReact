@@ -5,19 +5,19 @@ import Typography from '@mui/material/Typography';
 export const useStyles = makeStyles({
   aboutTitle: {
     color: '#445E77',
-    fontSize: '56px',
+    fontSize: '42px',
     textAlign: 'center',
-    fontWeight: '500',
+    fontWeight: '400',
     '@media(max-width: 1440px)': {
       fontSize: '42px',
     },
   },
 });
 
-const MainTitle = ({ mb, mt, children }) => {
+const MainTitle = ({ mb, mt, children, align='center', color = '#445E77'}) => {
   const classes = useStyles();
   return (
-    <Typography mb={mb} mt={mt} className={classes.aboutTitle}>
+    <Typography mb={mb} mt={mt} textAlign={align} style={{textAlign: align, color: color}} className={classes.aboutTitle}>
       {children}
     </Typography>
   );

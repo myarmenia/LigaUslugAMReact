@@ -4,7 +4,8 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { makeStyles, useMediaQuery } from '@material-ui/core';
-import AboutLigaImg from '../../../../assets/image/AboutLigaImg.png';
+import AboutLigaImg from '../../../../assets/image/AboutLigaImg2.png';
+
 
 const useStyles = makeStyles({
    titleReview: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles({
       textAlign: 'center',
       marginBottom: '14px',
       marginTop: '25px',
-      color: '#FE7D1F',
+      color: '#E93A75',
       '@media (max-width: 600px)': {
          fontSize: '60px',
       },
@@ -22,7 +23,7 @@ const useStyles = makeStyles({
       fontSize: '22px',
       textAlign: 'center',
       marginBottom: '33px',
-      color: '#FE7D1F',
+      color: '#E93A75',
       '@media (max-width: 600px)': {
          fontSize: '26px',
       },

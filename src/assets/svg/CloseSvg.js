@@ -1,4 +1,4 @@
-export const CloseSvg = ({ size = 21, color = '#FF6B00' }) => {
+export const CloseSvg = ({ size = 21, color = '#EA004F' }) => {
    return (
       <svg
          width={size}

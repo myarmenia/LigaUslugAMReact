@@ -2,23 +2,23 @@ import { object, string, ref, date } from 'yup';
 // array, boolean, mixed,
 
 export const ClickOnTaskValidation = () =>
-  object().shape({
-    offer_to_employer: string()
-      .required('Обязательное поле')
-      .min(4, 'Слишком короткий')
-      .max(250, 'Слишком длинный'),
-    startdate_from: date().required('Обязательное поле'),
-    start_date_to: date()
-      .required('Обязательное поле')
-      .min(ref('startdate_from'), 'Укажите корректные даты'),
-    service_price_from: string()
-      .required('Обязательное поле')
-      .matches(/^[0-9]+$/, 'Только число')
-      .min(3, 'Стоимость услуги должна содержать не меньше 3х символов.')
-      .max(18, 'Стоимость услуги должна содержать не больше 18и символов.'),
-    service_price_to: string()
-      .required('Обязательное поле')
-      .matches(/^[0-9]+$/, 'Только число')
-      .min(3, 'Стоимость услуги должна содержать не меньше 3х символов.')
-      .max(18, 'Стоимость услуги должна содержать не больше 18и символов.'),
-  });
+   object().shape({
+      offer_to_employer: string()
+         .required('Պարտադիր դաշտ')
+         .min(4, 'Շատ կարճ է')
+         .max(250, 'Չափազանց երկար է'),
+      startdate_from: date().required('Պարտադիր դաշտ'),
+      start_date_to: date()
+         .required('Պարտադիր դաշտ')
+         .min(ref('startdate_from'), 'Խնդրում ենք մուտքագրել ճիշտ ամսաթվերը'),
+      service_price_from: string()
+         .required('Պարտադիր դաշտ')
+         .matches(/^[0-9]+$/, 'Միայն թիվ')
+         .min(3, 'Ծառայության արժեքը պետք է պարունակի առնվազն 3 նիշ:')
+         .max(18, 'Ծառայության արժեքը պետք է պարունակի ոչ ավելի, քան 18 նիշ:'),
+      service_price_to: string()
+         .required('Պարտադիր դաշտ')
+         .matches(/^[0-9]+$/, 'Միայն թիվ')
+         .min(3, 'Ծառայության արժեքը պետք է պարունակի առնվազն 3 նիշ:')
+         .max(18, 'Ծառայության արժեքը պետք է պարունակի ոչ ավելի, քան 18 նիշ:'),
+   });

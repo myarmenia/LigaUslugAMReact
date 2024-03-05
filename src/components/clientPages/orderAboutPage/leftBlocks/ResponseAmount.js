@@ -32,20 +32,19 @@ const ResponseAmount = ({ state }) => {
       ).length ? (
         <>
           <Box className={classes.orderSubBlockSpaceBetween}>
-            <Typography variant={"h2"}>Сумма отклика</Typography>
+            <Typography variant={"h2"}>Պատասխանի գումարը</Typography>
             <Typography variant={"h2"}>
-              {header?.category ? price() : null} руб
+              {header?.category ? price() : null} 	֏
             </Typography>
           </Box>
           <CustomDivider />
           <Typography variant={"h4"}>
-            Сумма за отклик списывается с вашего счета только при условии
-            подтверждения заказчиком, вас в роли исполнителя.
+            Պատասխանի գումարը գանձվում է ձեր հաշվից միայն այն դեպքում, եթե հաճախորդը հաստատի, որ դուք կատարողն եք:
           </Typography>
         </>
       ) : (
         <Typography variant={"h2"} sx={{ color: "#4B9A2D" }}>
-          Вы уже откликнулись на этот заказ.
+          Դուք արդեն արձագանքել եք այս աշխատանքին
         </Typography>
       )}
     </Card>

@@ -54,7 +54,7 @@ export const useStyles = makeStyles({
       marginBottom: '69px',
       // border: '1px solid #F5F5F5',
       // boxShadow: '0px 0px 6px -4px #000000',
-      boxShadow: '0px 50px 41px -48px #000000',
+      // boxShadow: '0px 50px 41px -48px #32E3D2',
       border: '1px solid #e8e8e8',
       borderRadius: '20px',
       '@media (max-width: 1440px)': {
@@ -125,7 +125,7 @@ const TrustedExperts = ({ our_checked_specialists = [], reviewsRef }) => {
    const matches1440 = useMediaQuery('(min-width:1440px)');
    const matches1050 = useMediaQuery('(min-width:1050px)');
    const matches540 = useMediaQuery('(min-width:600px)');
-  
+
    const [open, setOpen] = useState(false);
 
    return (
@@ -140,15 +140,18 @@ const TrustedExperts = ({ our_checked_specialists = [], reviewsRef }) => {
          {/* <MainTitle mt={'75px'} mb={'75px'}>
         Наши Проверенные Специалисты
       </MainTitle> */}
-
          {!!our_checked_specialists?.length && (
             <Box
-               sx={{
-                  width: matches1440 ? '90%' : matches1050 ? '95%' : matches540 ? '95%' : '98%',
-                  margin: '0 6px',
-                  // height: 'fit-content',
-                  // width: '100%',
-               }}>
+            sx={{
+               width: matches1440 ? '90%' : matches1050 ? '95%' : matches540 ? '95%' : '98%',
+               margin: '0 6px',
+               // height: 'fit-content',
+               // width: '100%',
+            }}>
+               <MainTitle mb={8} color={'#000'} align='left'> 
+                  Մեր փորձառու մասնագետները
+               </MainTitle>
+
                <Swiper
                   freeMode={true}
                   grabCursor={true}

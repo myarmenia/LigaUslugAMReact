@@ -18,13 +18,13 @@ const NotAppliedOrderDetails = ({
 			<Box className={classes.orderSubBlockSpaceBetween}>
 				<Box>
 					<Typography variant={"h5"}>
-						Заказ № {order.id}, Категория: {order.category_name}
+					Պատվեր № {order.id}, Կարգավիճակ: {order.category_name}
 					</Typography>
 				</Box>
 
 				<Box>
 					<Typography variant={"h6"}>
-						Дата: {moment(order.created_at).format(`DD MMM (ddd)`)}
+					ամսաթիվ: {moment(order.created_at).format(`DD MMM (ddd)`)}
 					</Typography>
 				</Box>
 			</Box>
@@ -44,7 +44,7 @@ const NotAppliedOrderDetails = ({
 						className={classes.inLineStyle}
 						variant={"h6"}
 					>
-						Категория
+						Կարգավիճակ
 					</Typography>
 					<Typography className={classes.inLineStyle} variant={"h5"}>
 						{order.task_location}
@@ -54,7 +54,7 @@ const NotAppliedOrderDetails = ({
 						className={classes.inLineStyle}
 						variant={"h5"}
 					>
-						от {order.price_from} руб.
+						Սկսած {order.price_from} ֏.
 					</Typography>
 				</Box>
 			</Box>
@@ -65,7 +65,7 @@ const NotAppliedOrderDetails = ({
 			>
 				<Box>
 					<Typography style={{marginBottom: "10px"}} variant={"h5"}>
-						Место выполнения
+						Կատարման վայրը
 					</Typography>
 					<TaskLocation order={order} />
 					{/* <Typography variant={'h6'}>
@@ -100,14 +100,14 @@ const NotAppliedOrderDetails = ({
       )} */}
 			<CustomDivider />
 			<Typography style={{marginBottom: "10px"}} variant={"h5"}>
-				Когда
+				Երբ
 			</Typography>
 			<Typography color={"#808080"} variant={"h5"}>
 				{starTime} - {finishTime} можно предложить свои даты
 			</Typography>
 			<CustomDivider />
 			<Typography style={{marginBottom: "10px"}} variant={"h5"}>
-				Описание
+				Նկարագրություն
 			</Typography>
 			<Typography color={"#808080"} variant={"h6"}>
 				{order.task_description}
@@ -122,7 +122,7 @@ const NotAppliedOrderDetails = ({
 				) : (
 					<Box>
 						<Typography style={{color: "#4C9B2D"}}>
-							Нет откликов
+							Ոչ մի պատասխան
 						</Typography>
 					</Box>
 				)}
@@ -132,7 +132,7 @@ const NotAppliedOrderDetails = ({
 						style={{cursor: "pointer", paddingLeft: "5px"}}
 						variant={"h6"}
 					>
-						Свернуть
+						Փակել
 					</Typography>
 				</Box>
 			</Box>

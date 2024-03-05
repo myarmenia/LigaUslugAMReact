@@ -20,7 +20,7 @@ export default function ExitDelate({setIsOpenDeleteProfile}) {
           }}>
           Դուրս գալ
         </Typography>
-        <Typography sx={{ fontSize: '18px', cursor: 'pointer' }} onClick={()=>setIsOpenDeleteProfile(true)}>Ջնջել</Typography>
+        <Typography sx={{ fontSize: '18px', cursor: 'pointer' }} onClick={()=>setIsOpenDeleteProfile(true)}>gdhhdh</Typography>
         <Typography sx={{ color: '#808080', fontSize: '18px' }}>
           Դուք կկորցնեք ձեր կատարողի և հաճախորդի հաշիվները
         </Typography>

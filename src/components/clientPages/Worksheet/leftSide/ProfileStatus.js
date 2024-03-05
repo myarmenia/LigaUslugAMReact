@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import moment from 'moment';
-import 'moment/locale/ru';
+import 'moment/locale/hy-am';
 import React, { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import InfoSVG from '../../../../assets/svg/Profile/InfoSVG';
@@ -213,7 +213,7 @@ const ProfileStatus = ({ setShowModal, user, role, profile }) => {
                            fontSize: '18px',
                         },
                      }}>
-                    Հաստատեք ձեր հեռախոսահամարը
+                     Հաստատեք ձեր հեռախոսահամարը
                   </Typography>
                </Box>
                <Box style={{ background: '#808080', height: 1, marginBottom: '10px' }} />
@@ -240,12 +240,12 @@ const ProfileStatus = ({ setShowModal, user, role, profile }) => {
                      <Button
                         onClick={() => dispatch(verifyPhoneCode(value))} // es padverditi hamara es zaprosy ,,otpravit kodiny chka
                         sx={{
-                           backgroundColor: '#FF6B00',
+                           backgroundColor: '#EA004F',
                            color: '#FFF',
                            borderRadius: '10px',
                            fontSize: '18px',
                            width: '60%',
-                           '&:hover': { backgroundColor: '#FF6B00' },
+                           '&:hover': { backgroundColor: '#EA004F' },
                            '@media (max-width: 560px)': {
                               fontSize: '14px',
                            },
@@ -263,12 +263,12 @@ const ProfileStatus = ({ setShowModal, user, role, profile }) => {
                      <TextField placeholder="կոդ" sx={{ width: '100%' }}></TextField>
                      <Button
                         sx={{
-                           backgroundColor: '#FF6B00',
+                           backgroundColor: '#EA004F',
                            color: '#FFF',
                            borderRadius: '10px',
                            fontSize: '18px',
                            width: '60%',
-                           '&:hover': { backgroundColor: '#FF6B00' },
+                           '&:hover': { backgroundColor: '#EA004F' },
                            '@media (max-width: 560px)': {
                               fontSize: '14px',
                            },

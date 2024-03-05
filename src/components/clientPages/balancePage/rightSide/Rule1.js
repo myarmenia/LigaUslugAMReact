@@ -6,20 +6,20 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 const Rule1 = () => {
-  const classes = useOrderAboutStyles();
-  return (
-    <Card sx={{ boxShadow: 2 }}>
-      <Box className={classes.orderSubBlockSpaceBetween}>
-        <Typography variant={'h1'}>За что вы платите</Typography>
-      </Box>
-      <CustomDivider />
-      <Typography style={{ marginBottom: '20px' }} variant={'h4'}>
-        За отклик или контакт клиента. Отклик-оплачиваете предложение клиену, затем можете обсуждать
-        детали и договариваться в чате. Контакт клиента - бесплатно уточняете условия в чате,
-        платите только при обмене контактами.
-      </Typography>
-      {/*<Typography variant={'h5'}>Более >></Typography>*/}
-    </Card>
-  );
+   const classes = useOrderAboutStyles();
+   return (
+      <Card sx={{ boxShadow: 2 }}>
+         <Box className={classes.orderSubBlockSpaceBetween}>
+            <Typography variant={'h1'}>Ինչի՞ համար եք վճարում:</Typography>
+         </Box>
+         <CustomDivider />
+         <Typography style={{ marginBottom: '20px' }} variant={'h4'}>
+            Հաճախորդի պատասխանի կամ կապի համար: Պատասխան - դուք վճարում եք առաջարկը հաճախորդին,
+            այնուհետև կարող եք քննարկել մանրամասները և համաձայնության գալ չաթում: Հաճախորդի կոնտակտ
+            - ճշտեք պայմանները չաթում անվճար, վճարեք միայն կոնտակտներ փոխանակելիս:
+         </Typography>
+         {/*<Typography variant={'h5'}>Более >></Typography>*/}
+      </Card>
+   );
 };
 export default Rule1;

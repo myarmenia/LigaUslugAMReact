@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import LogoFooter from '../../../../assets/image/LogoFooter.png';
+import LogoFooter from '../../../../assets/image/gorc_ka.svg';
 import VkSvg from '../../../../assets/svg/footer/VkSvg.js';
 import TelegramSvg from '../../../../assets/svg/footer/TelegramSVG';
 import { useDispatch, useSelector } from 'react-redux';
@@ -31,7 +31,7 @@ export default function Footer({ handleScroll, categoriesRef, reviewsRef, setFoo
    // const navigate = useNavigate();
    const dispatch = useDispatch();
    const location = useLocation();
-
+  
    useEffect(() => {
       if (footerRef.current) {
          setFooterHeight(+footerRef.current.offsetHeight);
@@ -51,7 +51,9 @@ export default function Footer({ handleScroll, categoriesRef, reviewsRef, setFoo
       <Box
          ref={footerRef}
          style={{
-            backgroundColor: '#EBEBEB',
+            backgroundColor: '#FFFFFF',
+            boxShadow: '0px 0px 32px -19px',
+            marginTop: '50px'
             // position: "absolute",
             // bottom: 0,
             // width: "100vw"
@@ -106,7 +108,7 @@ export default function Footer({ handleScroll, categoriesRef, reviewsRef, setFoo
                      {/* <Typography sx={{ marginBottom: "5px" }}>
                 История заказов
               </Typography> */}
-                     <Typography>
+                     {/* <Typography>
                         <Link
                            to="/documents"
                            style={{
@@ -116,7 +118,7 @@ export default function Footer({ handleScroll, categoriesRef, reviewsRef, setFoo
                            }}>
                            Օգտագործման պայմաններ
                         </Link>
-                     </Typography>
+                     </Typography> */}
                   </Box>
                </Grid>
                <Grid item xs={24} sm={12} md={6} lg={3}>
@@ -185,13 +187,13 @@ export default function Footer({ handleScroll, categoriesRef, reviewsRef, setFoo
                      <Typography sx={{ textAlign: 'center', marginBottom: '5px' }}>
                         <span>Աջակցություն</span> <br />
                         <a
-                           href="mailto:liga124@mail.ru"
+                           href="mailto:sales@webex.am"
                            style={{
                               textDecoration: 'none',
                               color: 'black',
                               fontWeight: 'bold',
                            }}>
-                           liga124@mail.ru
+                           sales@webex.am
                         </a>
                      </Typography>
                      <Box
@@ -201,13 +203,13 @@ export default function Footer({ handleScroll, categoriesRef, reviewsRef, setFoo
                            marginBottom: '30px',
                            justifyContent: 'center',
                         }}>
-                        {socialMedia.map((el, index) => {
+                        {/* {socialMedia.map((el, index) => {
                            return (
                               <a key={index} href={el.path} target="_blank" rel="nofollow">
                                  {el.svg}
                               </a>
                            );
-                        })}
+                        })} */}
                      </Box>
                   </Box>
                </Grid>
@@ -231,7 +233,7 @@ export default function Footer({ handleScroll, categoriesRef, reviewsRef, setFoo
                               },
                            },
                         }}>
-                        <img alt="Лига Услуг" src={LogoFooter} />
+                        <img alt="Gorc-ka" src={LogoFooter} />
                      </Box>
                   </Box>
                </Grid>
@@ -240,7 +242,7 @@ export default function Footer({ handleScroll, categoriesRef, reviewsRef, setFoo
          <Box
             sx={{
                width: '100%',
-               backgroundColor: status === 'client' ? '#449D36' : '#FF6B00',
+               backgroundColor: '#8A74EF',
                height: '67px',
             }}
          />
