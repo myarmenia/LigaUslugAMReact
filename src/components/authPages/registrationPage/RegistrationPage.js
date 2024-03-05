@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import img from '../../../assets/image/authImg.jpg';
+import img from '../../../assets/image/authImg1.jpg';
 import Box from '@mui/material/Box';
 import { Formik } from 'formik';
 import { AuthValidation } from '../../../utils/validation/AuthValidation';
@@ -164,7 +164,7 @@ const RegistrationPage = () => {
                               load={loadAuth}
                               label={'Գրանցվել'}
                               action={handleSubmit}
-                              backgroundColor={'#449D36'}
+                              backgroundColor={'#8A74EF'}
                            />
                            {requestStatus && (
                               <Typography

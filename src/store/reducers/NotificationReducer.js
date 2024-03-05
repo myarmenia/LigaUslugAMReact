@@ -17,7 +17,6 @@ const notificationSlice = createSlice({
    initialState,
    reducers: {
       setNewNatification: (state, { payload }) => {
-         // console.log(payload);
          state.notifications = payload?.message?.map((el) => ({
             data: JSON.parse(el.data),
             id: el.id,

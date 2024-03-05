@@ -296,7 +296,6 @@ export const MyOrders = () => {
    const [value, setValue] = useState('');
    const [count, setCount] = useState(null);
 
-   // console.log('tasksList', tasksList);
    const dispatch = useDispatch();
    useEffect(() => {
       dispatch(getCauntEmployerTasks());
@@ -304,7 +303,7 @@ export const MyOrders = () => {
    }, [dispatch]);
 
    useEffect(() => {
-      setIsMounted(true)
+      setIsMounted(true);
       if (tasksList.length) {
          const id = [];
          for (let element of tasksList) {
@@ -325,7 +324,7 @@ export const MyOrders = () => {
                });
          }
       }
-      return ()=> setIsMounted(false)
+      return () => setIsMounted(false);
    }, [tasksList]);
 
    useEffect(() => {
@@ -340,7 +339,7 @@ export const MyOrders = () => {
          ),
       );
    }, [valueTime, dispatch]);
-   
+
    useEffect(() => {
       const echo = new Echo(options);
 

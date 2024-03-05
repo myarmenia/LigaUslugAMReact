@@ -63,7 +63,7 @@ const CategoriesBlock = ({
         paddingTop: 50,
       }}>
       <Container maxWidth={lg ? 'lg' : 'xl'}>
-        <MainTitle mb={'75px'}>
+        <MainTitle mb={'75px'} color={'#000'} align='left' >
           {status === 'executor' ? 'Ծառայությունների կատեգորիաներ' : 'Ծառայությունների կատեգորիաներ'}
         </MainTitle>
         <Box className={classes.container}>

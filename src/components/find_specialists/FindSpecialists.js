@@ -24,8 +24,8 @@ const FindSpecialists = () => {
    const { header } = useSelector((state) => state.header);
    const navigate = useNavigate();
    const [itemId, setitemId] = useState('');
-   const {id} = useParams()
-  
+   const { id } = useParams();
+
    //   const { category } = header;
    useEffect(() => {
       dispatch(getHeaderData());
@@ -34,7 +34,6 @@ const FindSpecialists = () => {
       if (Array.isArray(header.category) && category === null) {
          setCategory(
             header.category.map((el, i) => {
-               
                if (id ? el.id === +id : i === 0) {
                   setitemId(el.id);
                   return {
@@ -207,7 +206,7 @@ const FindSpecialists = () => {
                               className={classes.categors}
                               sx={{ fontWeight: el.activ ? 500 : 400 }}
                               style={{
-                                 color: el.activ ? '#449D36' : '#000',
+                                 color: el.activ ? '#8A74EF' : '#000',
                               }}
                               onClick={() => {
                                  setitemId(el.id);

@@ -4,7 +4,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import img from '../../../../assets/image/search_block_bg.png';
 import BlueButton from '../../../UI/CustomButtons/BlueButton';
-import fastSearch from '../../../../assets/image/fastSearch.png';
+import fastSearch from '../../../../assets/image/fastSearch2.png';
 import fastSearchIcon from '../../../../assets/image/fastSearchIcon.png';
 import fastSearchRotate from '../../../../assets/image/fastSearchRotate.png';
 import Button from '@mui/material/Button';
@@ -73,7 +73,7 @@ const useSearchBlock = makeStyles({
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       '@media (max-width: 600px)': {
-         backgroundImage: `url(${fastSearchRotate})`,
+         backgroundImage: `url(${fastSearch})`,
       },
    },
    fastSearchIcon: {
@@ -103,6 +103,10 @@ const useSearchBlock = makeStyles({
          fontSize: '13px',
          width: '170px',
          height: '50px',
+      },
+      '&:hover': {
+         backgroundColor: '#8A74EF',
+         opacity: '0.6',
       },
    },
 });

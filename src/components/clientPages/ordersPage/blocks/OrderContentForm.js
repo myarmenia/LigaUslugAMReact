@@ -91,7 +91,7 @@ const OrderContentForm = ({
               divider={<Divider orientation="vertical" flexItem />}
               spacing={4}>
               <Box style={{ padding: '0 10px' }}>
-                <Typography variant={'h4'}>Стоимость услуги</Typography>
+                <Typography variant={'h4'}>Ծառայության արժեքը</Typography>
                 <Box
                   style={{
                     display: 'flex',
@@ -105,10 +105,10 @@ const OrderContentForm = ({
                       name={'service_price_from'}
                       value={values.service_price_from}
                       handleChange={handleChange}
-                      placeholder={'От'}
+                      placeholder={'Սկսած'}
                       maxWidth={{ maxWidth: '243px' }}
                       width={'100%'}
-                      icon={'Руб.'}
+                      icon={'֏.'}
                       touched={touched.service_price_from}
                       error={errors.service_price_from || (touched.service_price_from && err)}
                     />
@@ -120,10 +120,10 @@ const OrderContentForm = ({
                       name={'service_price_to'}
                       value={values.service_price_to}
                       handleChange={handleChange}
-                      placeholder={'До'}
+                      placeholder={'Մինչեվ'}
                       width={'100%'}
                       maxWidth={{ maxWidth: '243px' }}
-                      icon={'Руб.'}
+                      icon={'֏.'}
                       touched={touched.service_price_to}
                       error={errors.service_price_to}
                     />
@@ -131,14 +131,14 @@ const OrderContentForm = ({
                 </Box>
               </Box>
               <Box style={{ padding: '0 10px' }}>
-                <Typography variant={'h4'}>Предложить свои даты</Typography>
+                <Typography variant={'h4'}>Առաջարկեք ձեր ամսաթվերը</Typography>
                 <Box style={{ display: 'flex', margin: '10px 0' }}>
                   <Box style={{ paddingRight: '10px' }}>
                     <Box sx={{ marginBottom: '15px' }}>
                       <CustomDatePicker
                         value={values.startdate_from}
                         name={'startdate_from'}
-                        label={'от'}
+                        label={'Սկսած'}
                         fun={(val) => setFieldValue('startdate_from', val)}
                         disablePast={true}
                       />
@@ -157,7 +157,7 @@ const OrderContentForm = ({
                       <CustomDatePicker
                         value={values.start_date_to}
                         name={'start_date_to'}
-                        label={'до'}
+                        label={'Մինչեվ'}
                         fun={(val) => setFieldValue('start_date_to', val)}
                         disablePast={true}
                       />
@@ -178,11 +178,11 @@ const OrderContentForm = ({
             </Stack>
             <Box style={{ margin: '20px 0' }}>
               <Typography style={{ marginBottom: '20px' }} variant={'h4'}>
-                Предложение заказчику
+                Առաջարկ հաճախորդին
               </Typography>
               <CustomInput
                 name={'offer_to_employer'}
-                placeholder={'Предложение заказчику'}
+                placeholder={'Առաջարկ հաճախորդին'}
                 textArea={true}
                 value={values.offer_to_employer}
                 handleChange={(val) => setFieldValue('offer_to_employer', val)}
@@ -205,13 +205,13 @@ const OrderContentForm = ({
                     }
                   }}
                   variant={'contained'}>
-                  Отправить
+                  Ուղարկել
                 </Button>
                 <Button
                   style={{ width: '200px', backgroundColor: '#E20613' }}
                   onClick={() => setShowForm(false)}
                   variant={'contained'}>
-                  Отменить
+                  Չեղարկել
                 </Button>
               </Box>
             </Box>

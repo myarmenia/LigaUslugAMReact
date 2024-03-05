@@ -9,7 +9,7 @@ import { IMAGE_TYPES } from "../../../../constants/images";
 const AdditionalFiles = ({ state }) => {
   return (
     <Card>
-      <Typography variant={"h2"}>Дополнительные файлы</Typography>
+      <Typography variant={"h2"}>Լրացուցիչ ֆայլեր</Typography>
       <Divider color={"#808080"} style={{ margin: "10px 0" }} />
       <Box style={{ 
         paddingLeft: "20px",

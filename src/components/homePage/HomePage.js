@@ -15,10 +15,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, EffectFade, Lazy, A11y, Navigation } from 'swiper';
 import { sliderInfo } from '../../helper';
-import { Box, useMediaQuery } from '@mui/material';
+import { Avatar, Box, ImageList, useMediaQuery } from '@mui/material';
 import { makeStyles } from '@material-ui/core';
 import { SearchBlock } from './blocks/searchBlock/SearchBlock';
-import homePageImg from '../../../src/assets/image/homePageImg.png';
+import homePageImg from '../../../src/assets/image/homPagesImg.png';
 import homePageImgSmall from '../../../src/assets/image/homePageImgSmall.png';
 import sliderFix from '../../../src/assets/image/sliderFix.png';
 import Slider from './blocks/Slider';
@@ -26,28 +26,32 @@ import Slider from './blocks/Slider';
 export const useStyles = makeStyles({
    bagImg: {
       // pt: "90px",
-      backgroundImage: `url(${homePageImg})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      // backgroundImage: `url(${homePageImg})`,
+      // backgroundRepeat: 'no-repeat',
+      // backgroundSize: 'cover',
+      // backgroundPosition: 'center',
       // width: "100%",
-      paddingTop: 'calc((4/2)*74%/14)',
-      paddingBottom: 'calc((4/2)*74%/14)',
+      paddingTop: 'calc((2)*15%/14)',
+      paddingBottom: 'calc((2)*0%/14)',
+      '@media(max-width: 1130px)': {
+         paddingTop: 'calc((2)*62%/14)',
+         paddingBottom: 'calc((2)*0%/14)',
+      },
       '@media(max-width: 821px)': {
-         backgroundImage: `url(${homePageImgSmall})`,
-         backgroundRepeat: 'no-repeat',
-         backgroundSize: 'cover',
-         backgroundPosition: 'center',
+         // backgroundImage: `url(${homePageImgSmall})`,
+         // backgroundRepeat: 'no-repeat',
+         // backgroundSize: 'cover',
+         // backgroundPosition: 'center',
          // paddingTop:"250px",
-         height: '600px',
+         // height: '500px',
       },
       // background:
       // 	"linear-gradient(180deg, rgba(73, 148, 43, 0.3) 18.39%, rgba(68, 94, 119, 0.3) 74.86%)",
    },
    sliderBack: {
-      backgroundImage: `url(${sliderFix})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain',
+      // backgroundImage: `url(${sliderFix})`,
+      // backgroundRepeat: 'no-repeat',
+      // backgroundSize: 'contain',
       backgroundPosition: 'left',
       width: '100%',
       height: '600px',
@@ -87,7 +91,9 @@ const HomePage = ({
    const matches1050 = useMediaQuery('(min-width:1050px)');
    const matches728 = useMediaQuery('(min-width:728px)');
    const matches540 = useMediaQuery('(min-width:600px)');
+   const matches700 = useMediaQuery('(min-width:700px)');
    const lg = useMediaQuery('(max-width:1440px)');
+
    return (
       <div>
          {showTermsOfUse && (
@@ -97,7 +103,17 @@ const HomePage = ({
             />
          )}
          <Box className={classes.bagImg}>
-            <Container maxWidth={lg ? 'lg' : 'xl'} sx={{ position: 'relative' }}>
+            <Container
+               maxWidth={lg ? 'lg' : 'xl'}
+               sx={{
+                  position: 'relative',
+                  display: 'flex',
+                  flexWrap: matches540 ? 'colum' : 'wrap',
+                  flexDirection: matches540 ? '' : 'column-reverse',
+                  // padding: '20px',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+               }}>
                {/* <Box
 						sx={{
 							position: "fixed",
@@ -121,22 +137,25 @@ const HomePage = ({
 							<GoToTelegramFourm />
 						</a>
 					</Box> */}
-          <Intro
-            {...{
-              categoriesRef,
-              showModal,
-              setShowModal,
-              modalCategory,
-              setModalSubCategory,
-              modalSubCategory,
-              setModalCategory,
-              handleScroll,
-            }}
-          />
-        </Container>
-      </Box>
-      <PresentHistory />
-      <Slider/>
+               <Box style={{ maxWidth: '500px', display: matches700 ? '' : 'none' }}>
+                  <img src={homePageImg} style={{ width: '100%' }} />
+               </Box>
+               <Intro
+                  {...{
+                     categoriesRef,
+                     showModal,
+                     setShowModal,
+                     modalCategory,
+                     setModalSubCategory,
+                     modalSubCategory,
+                     setModalCategory,
+                     handleScroll,
+                  }}
+               />
+            </Container>
+         </Box>
+         <PresentHistory />
+         <Slider />
 
          <CategoriesBlock
             categoriesRef={categoriesRef}

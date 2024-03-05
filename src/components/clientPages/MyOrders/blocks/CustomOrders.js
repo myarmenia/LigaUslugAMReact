@@ -181,7 +181,6 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
    const [invalidAmountMessageErr, setInvalidAmountMessageErr] = useState('');
    const [invalidAmountMessage, setInvalidAmountMessage] = useState('');
    const userId = useSelector((state) => state.auth.users.user_id);
-   
 
    const reject_executor = async (task_id, profile_id, taskId) => {
       await dispatch(
@@ -254,7 +253,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
       }
       dispatch(setLoading(true));
       // const patId = pathname.split('/').filter((el) => !isNaN(el))[1];
-      // console.log(patId);
+
       // dispatch(getConversationTaskList());
       fetchData(setState, dispatch, id);
       dispatch(getCompletedTasks());
@@ -331,7 +330,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                            fontSize: '18px',
                         },
                      }}>
-                     Встреча на объекте
+                     Հանդիպում տեղում
                   </Typography>
                </Box>
                <Box style={{ background: '#808080', height: 1, marginBottom: '10px' }} />
@@ -353,17 +352,17 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                      },
                   }}>
                   <Box>
-                     <Typography style={{ paddingBottom: '13px' }}>Дата</Typography>
+                     <Typography style={{ paddingBottom: '13px' }}>ամսաթիվը</Typography>
                      <CustomDatePicker fun={(d) => setDate(d)} />
                   </Box>
                   <Box>
-                     <Typography style={{ paddingBottom: '13px' }}>Время</Typography>
+                     <Typography style={{ paddingBottom: '13px' }}>Ժամանակ</Typography>
                      <TimePicker fun={(t) => setTime(t)} value={time} />
                   </Box>
                </Box>
                <Box sx={{ textAlign: 'center', paddingTop: '42px' }}>
                   <Button sx={{ backgroundColor: '#4B9A2D !important' }} variant={'contained'}>
-                     Выбрать
+                     Ընտրել
                   </Button>
                </Box>
             </Box>
@@ -377,14 +376,14 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
          <Box className={classes.orderSubBlockSpaceBetween}>
             <Box>
                <Typography variant={'h5'}>
-                  Заказ № {order?.id} Категория:{' '}
+                  Պատվեր № {order?.id} Կարգավիճակ:{' '}
                   {order?.category_name || order?.tasks?.category_name}
                </Typography>
             </Box>
 
             <Box>
                <Typography variant={'h6'}>
-                  Дата: {moment(order?.created_at).format(`DD MMM (ddd)`)}
+                  ամսաթիվը: {moment(order?.created_at).format(`DD MMM (ddd)`)}
                </Typography>
             </Box>
          </Box>
@@ -399,14 +398,14 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                         order?.tasks?.subcategory_name}
                   </Typography>
                   <Typography style={{ color: '#5A7287', fontSize: '24px' }}>
-                     от {order.price_from} руб.
+                     Սկսած {order.price_from} ֏․
                   </Typography>
                </Box>
                <Box>
                   <Typography
                      className={classes.wrapRight}
                      style={{ color: '#000', fontSize: '24px', fontWeight: '500' }}>
-                     Место встречи
+                     հանդիպման վայր
                   </Typography>
                   <Typography
                      className={classes.wrapRight}
@@ -447,7 +446,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                            <CustomDivider />
                            {index !== 0 && <CustomDivider />}
                            <Box className={classes.orderSubBlockSpaceBetween}>
-                              <Typography variant={'h6'}>Исполнитель № {index + 1}</Typography>
+                              <Typography variant={'h6'}>Կատարող № {index + 1}</Typography>
                               <Typography variant={'h6'}>
                                  {moment(executor.created_at).format(`LT L`)}
                               </Typography>
@@ -514,14 +513,14 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                               <Box style={{ paddingRight: '50px' }}>
                                  <Typography variant={'h6'}>Предлагаемая сроки</Typography>
                                  <Typography variant={'h4'}>
-                                    от {start_time} до {finish_time}
+                                    Սկսած {start_time} до {finish_time}
                                  </Typography>
                               </Box>
                               <Box>
                                  <Typography variant={'h6'}>Предлагаемая цена</Typography>
                                  <Typography variant={'h4'}>
-                                    от {executor.service_price_from} руб. до{' '}
-                                    {executor.service_price_to} руб.
+                                    Սկսած {executor.service_price_from} ֏․ до{' '}
+                                    {executor.service_price_to} ֏․
                                  </Typography>
                               </Box>
                            </Box>
@@ -566,10 +565,10 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                                     Отказаться
                                  </Button>
                                  <Button
-                                    sx={{ backgroundColor: '#FF6B00 !important' }}
+                                    sx={{ backgroundColor: '#EA004F !important' }}
                                     onClick={() => setOpen(!open)}
                                     variant={'contained'}>
-                                    Встреча на объекте
+                                    Հանդիպում տեղում
                                  </Button>
                               </Box>
                               <Box>
@@ -666,7 +665,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                               fontWeight: '400',
                               paddingTop: '20px',
                            }}>
-                           Исполнитель
+                           Կատարող
                         </Typography>
                         <Typography
                            variant="body1"
@@ -689,7 +688,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                            className={classes.wrapRight}
                            variant={'h5'}
                            onClick={() => navigate('/documents_all')}>
-                           Договор
+                           Համաձայնագիր
                         </Typography>
                         <Typography
                            sx={{
@@ -712,7 +711,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                                     <DownLoad2Svg />
                                  </Box>
                                  <Typography variant="body2" color={'#808080'}>
-                                    Скачать файл
+                                    Ներբեռնել ֆայլը
                                  </Typography>
                               </Box>
                            </a>
@@ -726,13 +725,13 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                         color: '#000',
                         paddingTop: '40px',
                      }}>
-                     {`Исполнитель завершил работу. Указал стоимость материалов ${
+                     {`կատարողը ավարտել է աշխատանքները։ Նշված է նյութերի արժեքը ${
                         order?.executor_material_price
-                     } рублей, стоимость работы ${
+                     } դրամ, աշխատանքի արժեքը ${
                         order?.executor_work_price
-                     } рублей, итоговая сумма ${
+                     } դրամ, ընդհանուր գումարը ${
                         +order?.executor_work_price + +order?.executor_material_price
-                     } рублей. `}
+                     } դրամ. `}
                   </Typography>
                   <Box sx={{ mt: '8px' }}>
                      {!reaffirm &&
@@ -753,7 +752,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                                     sendReview(order?.id);
                                  }}
                                  variant="contained">
-                                 Подтверждаю
+                                 Հավաստիացնում եմ
                               </Button>
                               <Button
                                  onClick={() => {
@@ -763,7 +762,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                                  sx={{
                                     background: '#E54C51 !important',
                                  }}>
-                                 Не верная сумма
+                                 Անվավեր գումար
                               </Button>
                            </Box>
                         )}
@@ -777,7 +776,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                                  flexDirection: 'column',
                                  gap: '5px',
                               }}>
-                              <Typography variant={'h6'}>Отправить модератору</Typography>
+                              <Typography variant={'h6'}>Ուղարկել մոդերատորին</Typography>
                               <TextField
                                  variant={'outlined'}
                                  multiline
@@ -812,11 +811,11 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                                           console.log(err);
                                        });
                                  } else {
-                                    setInvalidAmountMessageErr('Заполните поле');
+                                    setInvalidAmountMessageErr('Լրացրեք դաշտը');
                                  }
                               }}
                               variant="contained">
-                              Отправить
+                              Ուղարկել
                            </Button>
                         </>
                      )}
@@ -827,7 +826,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                               flexDirection: 'column',
                               gap: '5px',
                            }}>
-                           <Typography variant={'h6'}>Баллы</Typography>
+                           <Typography variant={'h6'}>Միավորներ</Typography>
                            <Rating
                               value={ratingVal}
                               onChange={(e) => setRatingVal(+e.target.value)}
@@ -856,7 +855,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                                        sendReview(order?.id);
                                     }}
                                     variant="contained">
-                                    Оставить отзыв
+                                    Թողնել մեկնաբանություն
                                  </Button>
                               )}
                         </Box>
@@ -870,7 +869,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                                  fontSize: '24px',
                                  lineHeight: '28px',
                               }}>
-                              Мой отзыв
+                              Իմ մեկնաբանությունը
                            </Typography>
                            <Rating
                               value={+order?.reitings?.employer_star_count_to_executor}
@@ -913,7 +912,7 @@ const CustomOrders = ({ order, status, setOpenToaster }) => {
                      mt: '8px',
                      color: '#4B9A2D !important',
                   }}>
-                  {`Исполнитель ${order?.executor_profiles?.users?.name}  ${order?.executor_profiles?.users?.last_name}`}
+                  {`Կատարող ${order?.executor_profiles?.users?.name}  ${order?.executor_profiles?.users?.last_name}`}
                </Typography>
             )}
          </Box>

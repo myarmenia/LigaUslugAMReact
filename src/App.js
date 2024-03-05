@@ -63,7 +63,7 @@ function App() {
    const { notifications } = useSelector((state) => state.notifications);
 
    // const isSubmited = useSelector((state) => state.taskExecutor.isSubmited);
-   
+
    useEffect(() => {
       async function fetchData() {
          if (status === 'executor' && auth) {
@@ -89,7 +89,7 @@ function App() {
    }, [auth, dispatch]);
    useEffect(() => {
       const echo = new Echo(options);
-   
+
       if (auth && userId) {
          echo
             .channel(`unreadnotificationcount_chanal.${userId}`)
@@ -160,7 +160,7 @@ function App() {
    };
 
    return (
-      <Box>
+      <Box >
          <Backdrop
             sx={{
                zIndex:

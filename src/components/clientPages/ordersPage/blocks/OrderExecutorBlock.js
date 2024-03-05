@@ -131,7 +131,7 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                   style={{ marginBottom: '10px' }}
                   // className={classes.wrapRight}
                   variant={'h2'}>
-                  Категория
+                  Կարգավիճակ
                </Typography>
                <Typography variant={'h5'}>
                   {order?.category_name || order?.tasks?.category_name}
@@ -142,7 +142,7 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                   style={{ marginBottom: '10px' }}
                   // className={classes.wrapRight}
                   variant={'h2'}>
-                  Дата выполнения работ
+                  Աշխատանքի ավարտի ամսաթիվը
                </Typography>
                <Typography
                   //  className={classes.inLineStyle}
@@ -166,7 +166,7 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                                     mt: '35px',
                                  }}>
                                  <Box style={{ paddingRight: '10px' }}>
-                                    <Typography>Стоимость материалов</Typography>
+                                    <Typography>Նյութերի արժեքը</Typography>
                                     <CustomInputIcon
                                        width={'100%'}
                                        value={costOfMaterials}
@@ -176,12 +176,12 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                                              setCostOfMaterials(e.target.value);
                                           }
                                        }}
-                                       placeholder={'От'}
+                                       placeholder={'Սկսած'}
                                        icon={'Руб.'}
                                     />
                                  </Box>
                                  <Box>
-                                    <Typography>Стоимость работы</Typography>
+                                    <Typography>Աշխատանքի արժեքը</Typography>
                                     <CustomInputIcon
                                        value={costOfWork}
                                        handleChange={(e) => {
@@ -233,7 +233,7 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                                  }
                               }}
                               variant={'contained'}>
-                              Завершить заказ
+                              Ավարտել պատվերը
                            </Button>
                         )}
                      </Box>
@@ -247,10 +247,10 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                      {order?.executor_work_price && order?.executor_material_price ? (
                         <>
                            <Typography sx={{ color: '#000', fontSize: '22px', fontWeight: '500' }}>
-                              Стоимость материалов {order?.executor_material_price} рублей,
-                              стоимость работы {order?.executor_work_price} рублей, итоговая сумма{' '}
+                              Նյութերի արժեքը {order?.executor_material_price} դրամ,
+                              Աշխատանքի արժեքը {order?.executor_work_price} դրամ, ընդհանուր գումարը{' '}
                               {+order?.executor_work_price + +order?.executor_material_price}{' '}
-                              рублей.
+                              դրամ.
                            </Typography>
                         </>
                      ) : null}
@@ -268,7 +268,7 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                                        // lineHeight: "28px",
                                        color: '#808080',
                                     }}>
-                                    Оценка
+                                    Գնահատական
                                  </Typography>
                                  <Rating
                                     value={ratingVal}
@@ -325,13 +325,13 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                                        })();
                                     }
                                  }}>
-                                 Оставить отзыв заказчику
+                                 Կարծիք թողեք հաճախորդին
                               </Button>
                            </>
                         ) : (
                            <>
                               <Box>
-                                 <Typography variant={'h5'}>Оценка</Typography>
+                                 <Typography variant={'h5'}>Գնահատական</Typography>
                                  <Rating
                                     value={+order?.reitings?.executor_star_count_to_employer}
                                     precision={0.5}
@@ -347,7 +347,7 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                                     fontSize: '24px',
                                     lineHeight: '28px',
                                  }}>
-                                 Мой отзыв
+                                 Իմ կարծիքը
                               </Typography>
                               <Typography
                                  variant={'h5'}
@@ -363,18 +363,18 @@ const OrderExecutorBlock = ({ order, index, deleteOrder }) => {
                   // </Typography>
                )}
                {order?.employer_watched_click ? (
-                  <Typography color={'#4C9B2D'} mt={1}>
-                     Заказчик увидел отклик
+                  <Typography color={'#8A74EF'} mt={1}>
+                     Հաճախորդը տեսավ արձագանքը
                   </Typography>
                ) : null}
                {order.status === 'interested' && (
-                  <Typography color={'#4C9B2D'} variant={'h4'}>
+                  <Typography color={'#8A74EF'} variant={'h4'}>
                      Заказчику интересно ваше предложение
                   </Typography>
                )}
                {order.status === 'showOrder' && (
-                  <Typography color={'#4C9B2D'} variant={'h4'}>
-                     Заказчик увидел отклик
+                  <Typography color={'#8A74EF'} variant={'h4'}>
+                     Հաճախորդը տեսավ արձագանքը
                   </Typography>
                )}
             </Box>

@@ -360,7 +360,7 @@ const FilterSpecialist = ({
                      </Box>
                      <Button
                         sx={{
-                           background: '#FF6B00',
+                           background: '#EA004F',
                            boxShadow: '4px 4px 10px 0px rgba(0, 0, 0, 0.20)',
                            width: '100%',
                            borderRadius: '20px',
@@ -368,7 +368,7 @@ const FilterSpecialist = ({
                            height: '46px',
                            mt: '25px',
                            '&:hover': {
-                              background: '#FF6B00',
+                              background: '#EA004F',
                            },
                         }}
                         // disabled={

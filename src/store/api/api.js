@@ -26,17 +26,30 @@ export const unAuthorizedInstance = axios.create({
    },
 });
 
-// const cookies = new Cookies();
+
+
+// export const options = {
+//    broadcaster: 'pusher',
+//    key: 'qwerty885522336699',
+//    wsHost: '127.0.0.1',
+//    encrypted: false,
+//    wsPort: 6001,
+//    wssPort: 6001,
+//    forceTLS: false,
+//    disableStats: true,
+//    enabledTransports: ['ws', 'wss'],
+//  };
+
 export const options = {
    broadcaster: 'pusher',
-   key: 'asdf',
-   wsHost: 'backend.ligauslug.ru',
+   key: process.env.REACT_APP_PUSHER_KEY,
+   wsHost: process.env.REACT_APP_PUSHER_WsHost,
+   wsPort: process.env.REACT_APP_PUSHER_WsPort,
+   wssPort: process.env.REACT_APP_PUSHER_WssPort,
    encrypted: false,
-   wsPort: 6001,
-   wssPort: 6001,
    forceTLS: false,
    disableStats: true,
-   // enabledTransports: ['wss', 'wss'],
+   enabledTransports: ['ws', 'wss'],
 };
 
 //  const echo = new Echo(options);

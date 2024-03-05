@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
-import Logo from '../../../assets/image/logoSmall.png';
+import Logo from '../../../assets/image/gorc_ka.svg';
 import UserSvg from '../../../assets/svg/header/UserSvg';
 import NotificationSvg from '../../../assets/svg/header/NotificationSvj';
 import MessageSvg from '../../../assets/svg/header/MessageSvg';
@@ -47,7 +47,7 @@ const useNavStyles = makeStyles({
          backgroundColor: '#fff',
       },
       '& .MuiButton-contained': {
-         backgroundColor: '#FF6B00',
+         backgroundColor: '#EA004F',
          borderRadius: '12px',
          textTransform: 'none',
          fontSize: '22px',
@@ -58,7 +58,7 @@ const useNavStyles = makeStyles({
          textOverflow: 'ellipsis',
       },
       '& .MuiButton-outlined': {
-         background: '#449D36',
+         background: '#8A74EF',
          textTransform: 'none',
          color: '#fff',
          fontWeight: 500,
@@ -68,7 +68,7 @@ const useNavStyles = makeStyles({
          overflow: 'hidden',
          textOverflow: 'ellipsis',
          '&:hover': {
-            background: '#449D36 !important',
+            background: '#8A74EF !important',
          },
          '@media(max-width: 1440px)': {
             fontSize: '16px',
@@ -84,12 +84,12 @@ const useNavStyles = makeStyles({
    menuItemExecutor: {
       backgroundColor: 'white !important',
       '&:hover': {
-         color: '#FF6B00',
+         color: '#EA004F',
       },
    },
 
    button_contained: {
-      backgroundColor: '#4B9A2D',
+      // backgroundColor: '#4B9A2D',
       borderRadius: '10px',
       textTransform: 'none',
       color: '#fff',
@@ -389,8 +389,9 @@ export const MainNavBar = () => {
             {/* <ModalPersonalData showModal={openModal} setShowModal={setOpenModal} /> */}
             <AppBar
                sx={{
+                  // rgba(233, 58, 117, 1)
                   boxShadow:
-                     '0px 4px 10px rgb(75 154 45 / 25%), 0px 6px 12px rgb(75 154 45 / 30%), 0px 7px 10px rgb(75 154 45 / 40%), 0px 8px 14px rgb(75 154 45 / 45%)',
+                     '0px 4px 10px rgb(50 227 210 / 25%), 0px 6px 12px rgb(50 227 210 / 30%), 0px 7px 10px rgb(50 227 210 / 40%), 0px 8px 14px rgb(50 227 210 / 45%)',
                }}>
                <ModalLogOut
                   open={!!openLogOutModal}
@@ -471,7 +472,7 @@ export const MainNavBar = () => {
                                           display: { xs: 'flex', md: 'none' },
                                        }}>
                                        <img src={Logo} className={classes.img} alt="alternative" />
-                                       Лига услуг
+                                       Gorc-ka
                                     </Typography>
                                     <IconButton
                                        onClick={() => {
@@ -582,33 +583,32 @@ export const MainNavBar = () => {
                               }}>
                               {pages.map((page, i) => (
                                  <Button
-                                 key={i}
-                                 onClick={() => {
-                                    if (page.path) {
-                                       handleCloseNavMenu(page.path);
-                                    } else {
-                                       fetchPagesAllTasks(dispatch, navigate);
-                                    }
-                                    console.log(page.title )
-                                 }}
-                                 sx={{
-                                    my: 2,
-                                    color: active === page.path ? '#445e77' : '#000',
-                                    display: 'block',
-                                    textTransform: 'none',
-                                    display: 'flex',
-                                    gap: '3px',
-                                    alignItems: 'center',
-                                    fontSize: '24px',
-                                    fontWeight: '400',
-                                    '@media (max-width: 1440px)': {
-                                       fontSize: '18px',
-                                    },
-                                 }}>
+                                    key={i}
+                                    onClick={() => {
+                                       if (page.path) {
+                                          handleCloseNavMenu(page.path);
+                                       } else {
+                                          fetchPagesAllTasks(dispatch, navigate);
+                                       }
+                                    }}
+                                    sx={{
+                                       my: 2,
+                                       color: active === page.path ? '#445e77' : '#000',
+                                       display: 'block',
+                                       textTransform: 'none',
+                                       display: 'flex',
+                                       gap: '3px',
+                                       alignItems: 'center',
+                                       fontSize: '24px',
+                                       fontWeight: '400',
+                                       '@media (max-width: 1440px)': {
+                                          fontSize: '18px',
+                                       },
+                                    }}>
                                     <span>{page.title}</span>
                                     {page.title === 'Պատվերներ' && (
                                        <Box
-                                       sx={{
+                                          sx={{
                                              width: '24px',
                                              height: '24px',
                                              borderRadius: '50%',
@@ -861,7 +861,7 @@ export const MainNavBar = () => {
                                  onClick={() => {
                                     dispatch(setIsOpenLogoutModal(true));
                                  }}>
-                                 <Logout />
+                                 <Logout width={'26px'} height={'26px'}/>
                               </IconButton>
                            </Box>
                         </Box>
